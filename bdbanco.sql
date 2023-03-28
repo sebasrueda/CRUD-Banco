@@ -12,14 +12,6 @@ CREATE TABLE tblclientes(
     telefono INT
 );
 
-CREATE TABLE tblretiros(
-	idretiro INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    cedula INT NOT NULL,
-    fecha_transacccion DATETIME NOT NULL,
-    monto INT NOT NULL,
-    FOREIGN KEY (cedula) REFERENCES tblclientes(cedula)
-);
-
 CREATE TABLE cuentas(
 	idcuenta INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     cedula INT NOT NULL UNIQUE,
